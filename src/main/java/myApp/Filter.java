@@ -22,7 +22,7 @@ public class Filter {
         return temp;
     }
 
-    public int differenceOfSumOfValue(String firstGroup, String secondGroup) {
+    public int differenceBetweenSumsOfValue(String firstGroup, String secondGroup) {
         return Math.abs(firstGroup.chars().sum() - secondGroup.chars().sum());
     }
 

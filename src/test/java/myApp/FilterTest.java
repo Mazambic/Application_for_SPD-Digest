@@ -26,7 +26,7 @@ public class FilterTest {
 
     @Test
     public void differenceOfSumOfValue() {
-        Assert.assertEquals(20, testFilter.differenceOfSumOfValue("PD", "SU"));
+        Assert.assertEquals(20, testFilter.differenceBetweenSumsOfValue("PD", "SU"));
     }
 
 }

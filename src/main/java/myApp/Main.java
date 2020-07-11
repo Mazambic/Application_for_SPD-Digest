@@ -10,7 +10,7 @@ public class Main {
 
         String[] myGroups = filter.groupMaker(filter.charFilter(argsCheck(args)));
 
-        printer(myGroups, filter.differenceOfSumOfValue(myGroups[0], myGroups[1]));
+        printer(myGroups, filter.differenceBetweenSumsOfValue(myGroups[0], myGroups[1]));
     }
 
     public static String argsCheck(String[] args) {
@@ -20,15 +20,15 @@ public class Main {
             return args[0];
     }
 
-    public static void printer(String[] outValue, int outRes) {
-        String massage = "The difference between the sums of ASCII codes of the two groups: " + " " + outRes;
-        System.out.printf("%s%n", massage);
+    public static void printer(String[] toPrint, int resToPrint) {
+        String message = "The difference between the sums of ASCII codes of the two groups: " + " " + resToPrint;
+        System.out.printf("%s%n", message);
         for (int i = 1; i < 3; i++) {
             System.out.printf(
                     "graphic representation  -  " +
                             "Decimal representation " +
                             "%d" + " - group: %n", i);
-            for (char c : outValue[i - 1].toCharArray()) {
+            for (char c : toPrint[i - 1].toCharArray()) {
                 System.out.printf("\t\t\t%s\t\t\t-\t\t\t%d\n", c, (byte) c);
             }
         }
