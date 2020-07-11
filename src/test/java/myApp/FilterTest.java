@@ -25,8 +25,18 @@ public class FilterTest {
     }
 
     @Test
-    public void differenceOfSumOfValue() {
+    public void ifOneSymbolGroupMaker() {
+        Assert.assertArrayEquals(new String[]{"", "A"}, testFilter.groupMaker("A"));
+    }
+
+    @Test
+    public void differenceBetweenSumOfValue() {
         Assert.assertEquals(20, testFilter.differenceBetweenSumsOfValue("PD", "SU"));
+    }
+
+    @Test
+    public void ifOneSymbolDifferenceBetweenSumOfValue() {
+        Assert.assertEquals(65, testFilter.differenceBetweenSumsOfValue("A", ""));
     }
 
 }
